@@ -3,27 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16BFAF58FF4669D1B2DBCCD1 /* Pods_MuscleDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D659BE1DEF935BE146756667 /* Pods_MuscleDiary.framework */; };
+		4372D6AA2455F778000458AE /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372D6A92455F778000458AE /* SignInVC.swift */; };
+		4372D6AC24567F4F000458AE /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372D6AB24567F4F000458AE /* IndicatorView.swift */; };
+		4372D6AE24567FB8000458AE /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372D6AD24567FB8000458AE /* UIViewController.swift */; };
 		438E4D7624532D0200960F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E4D7524532D0200960F3C /* AppDelegate.swift */; };
 		438E4D7824532D0200960F3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E4D7724532D0200960F3C /* SceneDelegate.swift */; };
-		438E4D7A24532D0200960F3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E4D7924532D0200960F3C /* ViewController.swift */; };
 		438E4D7D24532D0200960F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438E4D7B24532D0200960F3C /* Main.storyboard */; };
 		438E4D7F24532D0B00960F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438E4D7E24532D0B00960F3C /* Assets.xcassets */; };
 		438E4D8224532D0B00960F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438E4D8024532D0B00960F3C /* LaunchScreen.storyboard */; };
+		439B718C2455EB1B00019F81 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B718B2455EB1B00019F81 /* UIColor.swift */; };
+		439B718E2455EB6400019F81 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B718D2455EB6400019F81 /* String.swift */; };
+		439B71902455EBB400019F81 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B718F2455EBB400019F81 /* BaseVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DC53F488F4436F99226A7B8 /* Pods-MuscleDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleDiary.release.xcconfig"; path = "Target Support Files/Pods-MuscleDiary/Pods-MuscleDiary.release.xcconfig"; sourceTree = "<group>"; };
+		4372D6A92455F778000458AE /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		4372D6AB24567F4F000458AE /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		4372D6AD24567FB8000458AE /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		438E4D7224532D0200960F3C /* MuscleDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuscleDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		438E4D7524532D0200960F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		438E4D7724532D0200960F3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		438E4D7924532D0200960F3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		438E4D7C24532D0200960F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		438E4D7E24532D0B00960F3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		438E4D8124532D0B00960F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		438E4D8324532D0B00960F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		439B718B2455EB1B00019F81 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		439B718D2455EB6400019F81 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		439B718F2455EBB400019F81 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		5935191B2FD470B20279AB68 /* Pods-MuscleDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleDiary.debug.xcconfig"; path = "Target Support Files/Pods-MuscleDiary/Pods-MuscleDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		D659BE1DEF935BE146756667 /* Pods_MuscleDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16BFAF58FF4669D1B2DBCCD1 /* Pods_MuscleDiary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4372D6A82455F762000458AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4372D6A92455F778000458AE /* SignInVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		438E4D6924532D0200960F3C = {
 			isa = PBXGroup;
 			children = (
 				438E4D7424532D0200960F3C /* MuscleDiary */,
 				438E4D7324532D0200960F3C /* Products */,
+				77D2E6781D84D0681C5FAA5A /* Pods */,
+				AB4C55A2B739EE2D72D92E21 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +81,69 @@
 		438E4D7424532D0200960F3C /* MuscleDiary */ = {
 			isa = PBXGroup;
 			children = (
+				439B71892455EAEA00019F81 /* Config */,
+				439B71872455E86700019F81 /* SignIn */,
+				439B71882455E87A00019F81 /* SignUp */,
 				438E4D7524532D0200960F3C /* AppDelegate.swift */,
 				438E4D7724532D0200960F3C /* SceneDelegate.swift */,
-				438E4D7924532D0200960F3C /* ViewController.swift */,
 				438E4D7B24532D0200960F3C /* Main.storyboard */,
 				438E4D7E24532D0B00960F3C /* Assets.xcassets */,
 				438E4D8024532D0B00960F3C /* LaunchScreen.storyboard */,
 				438E4D8324532D0B00960F3C /* Info.plist */,
 			);
 			path = MuscleDiary;
+			sourceTree = "<group>";
+		};
+		439B71872455E86700019F81 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				4372D6A82455F762000458AE /* View */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		439B71882455E87A00019F81 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		439B71892455EAEA00019F81 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				439B718A2455EB0300019F81 /* Extension */,
+				439B718F2455EBB400019F81 /* BaseVC.swift */,
+				4372D6AB24567F4F000458AE /* IndicatorView.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		439B718A2455EB0300019F81 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				439B718B2455EB1B00019F81 /* UIColor.swift */,
+				439B718D2455EB6400019F81 /* String.swift */,
+				4372D6AD24567FB8000458AE /* UIViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		77D2E6781D84D0681C5FAA5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5935191B2FD470B20279AB68 /* Pods-MuscleDiary.debug.xcconfig */,
+				1DC53F488F4436F99226A7B8 /* Pods-MuscleDiary.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AB4C55A2B739EE2D72D92E21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D659BE1DEF935BE146756667 /* Pods_MuscleDiary.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 438E4D8624532D0B00960F3C /* Build configuration list for PBXNativeTarget "MuscleDiary" */;
 			buildPhases = (
+				F39EBCC66A68A1E76986072B /* [CP] Check Pods Manifest.lock */,
 				438E4D6E24532D0200960F3C /* Sources */,
 				438E4D6F24532D0200960F3C /* Frameworks */,
 				438E4D7024532D0200960F3C /* Resources */,
+				7C9F5C40402F183AB1D6781F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +214,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7C9F5C40402F183AB1D6781F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuscleDiary/Pods-MuscleDiary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuscleDiary/Pods-MuscleDiary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuscleDiary/Pods-MuscleDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F39EBCC66A68A1E76986072B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MuscleDiary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		438E4D6E24532D0200960F3C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				438E4D7A24532D0200960F3C /* ViewController.swift in Sources */,
+				439B71902455EBB400019F81 /* BaseVC.swift in Sources */,
+				439B718C2455EB1B00019F81 /* UIColor.swift in Sources */,
+				4372D6AA2455F778000458AE /* SignInVC.swift in Sources */,
+				4372D6AC24567F4F000458AE /* IndicatorView.swift in Sources */,
+				439B718E2455EB6400019F81 /* String.swift in Sources */,
 				438E4D7624532D0200960F3C /* AppDelegate.swift in Sources */,
+				4372D6AE24567FB8000458AE /* UIViewController.swift in Sources */,
 				438E4D7824532D0200960F3C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +410,7 @@
 		};
 		438E4D8724532D0B00960F3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5935191B2FD470B20279AB68 /* Pods-MuscleDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -292,6 +421,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Rubin.ios.MuscleDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -301,6 +431,7 @@
 		};
 		438E4D8824532D0B00960F3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DC53F488F4436F99226A7B8 /* Pods-MuscleDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -311,6 +442,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Rubin.ios.MuscleDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
