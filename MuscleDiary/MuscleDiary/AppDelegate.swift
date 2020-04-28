@@ -18,6 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         NetworkActivityIndicatorManager.shared.isEnabled = true
+        
+        if let _ = UserDefaults.standard.string(forKey: "LoginToken") {
+            if #available(iOS 13.0, *) {}
+            else {
+                self.window = UIWindow(frame: UIScreen.main.bounds)
+                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "MainVC")
+                self.window?.rootViewController = mainVC
+                self.window?.makeKeyAndVisible()
+            }
+        }
+        
         return true
     }
 
