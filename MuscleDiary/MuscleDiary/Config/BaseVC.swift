@@ -37,9 +37,6 @@ class BaseVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-        //            UITextField.appearance().tintColor = .cursorColor
-        //            UITextView.appearance().tintColor = .cursorColor
-        //        self.tabBarController?.tabBar.isHidden = true
     }
     
     func appearIndicator() {
