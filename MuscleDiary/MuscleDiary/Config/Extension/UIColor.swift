@@ -17,5 +17,7 @@ extension UIColor {
             alpha: CGFloat(alpha)
         )
     }
+    
+    static let circleProgressBackgroundColor: UIColor = UIColor(named: "CircleProgressBackgroundColor")!
 
 }
