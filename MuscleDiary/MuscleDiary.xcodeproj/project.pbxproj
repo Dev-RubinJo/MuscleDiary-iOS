@@ -11,6 +11,12 @@
 		4372D6AA2455F778000458AE /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372D6A92455F778000458AE /* SignInVC.swift */; };
 		4372D6AC24567F4F000458AE /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372D6AB24567F4F000458AE /* IndicatorView.swift */; };
 		4372D6AE24567FB8000458AE /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372D6AD24567FB8000458AE /* UIViewController.swift */; };
+		4372D6B6245D60D9000458AE /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372D6B5245D60D9000458AE /* SignUpVC.swift */; };
+		4372D6BC245D6869000458AE /* ChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372D6BB245D6869000458AE /* ChartVC.swift */; };
+		4372D6BE245D6879000458AE /* ExerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372D6BD245D6879000458AE /* ExerciseVC.swift */; };
+		4372D6C0245D6885000458AE /* FoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372D6BF245D6885000458AE /* FoodVC.swift */; };
+		4372D6C2245D6893000458AE /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372D6C1245D6893000458AE /* SettingVC.swift */; };
+		4372D6C6245D962E000458AE /* CircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372D6C5245D962E000458AE /* CircleProgressBar.swift */; };
 		438E4D7624532D0200960F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E4D7524532D0200960F3C /* AppDelegate.swift */; };
 		438E4D7824532D0200960F3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E4D7724532D0200960F3C /* SceneDelegate.swift */; };
 		438E4D7D24532D0200960F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438E4D7B24532D0200960F3C /* Main.storyboard */; };
@@ -26,6 +32,12 @@
 		4372D6A92455F778000458AE /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		4372D6AB24567F4F000458AE /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		4372D6AD24567FB8000458AE /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		4372D6B5245D60D9000458AE /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		4372D6BB245D6869000458AE /* ChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChartVC.swift; path = MuscleDiary/Main/Chart/View/ChartVC.swift; sourceTree = SOURCE_ROOT; };
+		4372D6BD245D6879000458AE /* ExerciseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseVC.swift; sourceTree = "<group>"; };
+		4372D6BF245D6885000458AE /* FoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodVC.swift; sourceTree = "<group>"; };
+		4372D6C1245D6893000458AE /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		4372D6C5245D962E000458AE /* CircleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressBar.swift; sourceTree = "<group>"; };
 		438E4D7224532D0200960F3C /* MuscleDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuscleDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		438E4D7524532D0200960F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		438E4D7724532D0200960F3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +72,90 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4372D6AF245D5F4F000458AE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4372D6B0245D5F5E000458AE /* Food */,
+				4372D6B3245D5FDA000458AE /* Exercise */,
+				4372D6B1245D5FD2000458AE /* Chart */,
+				4372D6B2245D5FD8000458AE /* Setting */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4372D6B0245D5F5E000458AE /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				4372D6B9245D6530000458AE /* View */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		4372D6B1245D5FD2000458AE /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				4372D6B7245D6525000458AE /* View */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		4372D6B2245D5FD8000458AE /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				4372D6BA245D6537000458AE /* View */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		4372D6B3245D5FDA000458AE /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				4372D6B8245D652B000458AE /* View */,
+			);
+			path = Exercise;
+			sourceTree = "<group>";
+		};
+		4372D6B4245D60BA000458AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4372D6B5245D60D9000458AE /* SignUpVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4372D6B7245D6525000458AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4372D6BB245D6869000458AE /* ChartVC.swift */,
+			);
+			name = View;
+			path = "퍋ㅈ";
+			sourceTree = "<group>";
+		};
+		4372D6B8245D652B000458AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4372D6BD245D6879000458AE /* ExerciseVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4372D6B9245D6530000458AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4372D6BF245D6885000458AE /* FoodVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4372D6BA245D6537000458AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4372D6C1245D6893000458AE /* SettingVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		438E4D6924532D0200960F3C = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +180,7 @@
 				439B71892455EAEA00019F81 /* Config */,
 				439B71872455E86700019F81 /* SignIn */,
 				439B71882455E87A00019F81 /* SignUp */,
+				4372D6AF245D5F4F000458AE /* Main */,
 				438E4D7524532D0200960F3C /* AppDelegate.swift */,
 				438E4D7724532D0200960F3C /* SceneDelegate.swift */,
 				438E4D7B24532D0200960F3C /* Main.storyboard */,
@@ -105,6 +202,7 @@
 		439B71882455E87A00019F81 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				4372D6B4245D60BA000458AE /* View */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -115,6 +213,7 @@
 				439B718A2455EB0300019F81 /* Extension */,
 				439B718F2455EBB400019F81 /* BaseVC.swift */,
 				4372D6AB24567F4F000458AE /* IndicatorView.swift */,
+				4372D6C5245D962E000458AE /* CircleProgressBar.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -262,13 +361,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				439B71902455EBB400019F81 /* BaseVC.swift in Sources */,
+				4372D6B6245D60D9000458AE /* SignUpVC.swift in Sources */,
 				439B718C2455EB1B00019F81 /* UIColor.swift in Sources */,
 				4372D6AA2455F778000458AE /* SignInVC.swift in Sources */,
 				4372D6AC24567F4F000458AE /* IndicatorView.swift in Sources */,
 				439B718E2455EB6400019F81 /* String.swift in Sources */,
+				4372D6C6245D962E000458AE /* CircleProgressBar.swift in Sources */,
 				438E4D7624532D0200960F3C /* AppDelegate.swift in Sources */,
+				4372D6BE245D6879000458AE /* ExerciseVC.swift in Sources */,
+				4372D6C0245D6885000458AE /* FoodVC.swift in Sources */,
 				4372D6AE24567FB8000458AE /* UIViewController.swift in Sources */,
 				438E4D7824532D0200960F3C /* SceneDelegate.swift in Sources */,
+				4372D6BC245D6869000458AE /* ChartVC.swift in Sources */,
+				4372D6C2245D6893000458AE /* SettingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +519,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6M94RM5DH9;
+				DEVELOPMENT_TEAM = 69F5355JYF;
 				INFOPLIST_FILE = MuscleDiary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -435,7 +540,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6M94RM5DH9;
+				DEVELOPMENT_TEAM = 69F5355JYF;
 				INFOPLIST_FILE = MuscleDiary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

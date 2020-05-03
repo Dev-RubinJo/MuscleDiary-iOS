@@ -16,6 +16,9 @@ target 'MuscleDiary' do
   # pod 'SwiftyJSON'
   # pod 'RealmSwift'
   
+  # Calendar
+  pod 'FSCalendar'
+  
   # Drawer View Controller
   # pod 'KWDrawerController', '~> 4.2'
   # Star Rating Library
