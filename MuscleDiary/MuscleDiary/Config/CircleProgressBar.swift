@@ -45,7 +45,7 @@ class CircularProgressView: UIView {
         circleLayer.path = circularPath.cgPath
     }
     
-    func progressAnimation(duration: TimeInterval, value: Float, color: UIColor) {
+    func progressAnimation(duration: TimeInterval, value: Double, color: UIColor) {
         let circularProgressAnimation = CABasicAnimation(keyPath: "strokeEnd")
         circularProgressAnimation.duration = duration
         circularProgressAnimation.toValue = value

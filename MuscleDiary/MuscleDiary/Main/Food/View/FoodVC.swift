@@ -24,17 +24,20 @@ class FoodVC: BaseVC {
     @IBOutlet weak var carbohydrateView: UIView!
     @IBOutlet weak var carbohydrateCircleProgressView: CircularProgressView!
     @IBOutlet weak var carbohydrateLabel: UILabel!
+    @IBOutlet weak var recommendCarbohydrateLabel: UILabel!
     
     @IBOutlet weak var proteinView: UIView!
     @IBOutlet weak var proteinCircleProgressView: CircularProgressView!
     @IBOutlet weak var proteinLabel: UILabel!
-    
-    @IBOutlet weak var proteinAdvertiseView: UIView!
-    @IBOutlet weak var proteinAdvertiseViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var recommendProteinLabel: UILabel!
     
     @IBOutlet weak var fatView: UIView!
     @IBOutlet weak var fatCircleProgressView: CircularProgressView!
     @IBOutlet weak var fatLabel: UILabel!
+    @IBOutlet weak var recommendFatLabel: UILabel!
+    
+    @IBOutlet weak var proteinAdvertiseView: UIView!
+    @IBOutlet weak var proteinAdvertiseViewHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var breakfastView: UIView!
     @IBOutlet weak var breakfastViewHeightConstraint: NSLayoutConstraint!
@@ -45,9 +48,13 @@ class FoodVC: BaseVC {
     @IBOutlet weak var dinnerView: UIView!
     @IBOutlet weak var dinnerViewHeightConstraint: NSLayoutConstraint!
     
-    var carbohydrate: Float = 0.0
-    var protein: Float = 0.0
-    var fat: Float = 0.0
+    var carbohydrate: Double = 0
+    var protein: Double = 0
+    var fat: Double = 0
+    
+    var recommendCarbohydrate: Double = 120
+    var recommendProtein: Double = 120
+    var recommendFat: Double = 100
     
     fileprivate lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -61,6 +68,10 @@ class FoodVC: BaseVC {
         self.caloryInfoView.layer.cornerRadius = 20
         self.initFsCalendar()
         self.setCircleProgressView()
+        
+        self.setBreakfastView(heightValue: 0)
+        self.setLunchView(heightValue: 0)
+        self.setDinnerView(heightValue: 0)
     }
     
     private func initFsCalendar() {
@@ -75,16 +86,47 @@ class FoodVC: BaseVC {
     }
     
     private func setCircleProgressView() {
-        self.carbohydrateCircleProgressView.progressAnimation(duration: 0.01, value: self.carbohydrate / 120, color: .purple)
-        self.carbohydrateLabel.text = "\(self.carbohydrate)"
+        self.carbohydrateCircleProgressView.progressAnimation(duration: 0.01, value: self.carbohydrate / self.recommendCarbohydrate, color: .purple)
+        self.carbohydrateLabel.text = "\(Int(self.carbohydrate))"
+        self.recommendCarbohydrateLabel.text = "\(Int(self.recommendCarbohydrate))"
         
-        self.proteinCircleProgressView.progressAnimation(duration: 0.01, value: self.protein / 120, color: .green)
-        self.proteinLabel.text = "\(self.protein)"
+        self.proteinCircleProgressView.progressAnimation(duration: 0.01, value: self.protein / self.recommendProtein, color: .green)
+        self.proteinLabel.text = "\(Int(self.protein))"
+        self.recommendProteinLabel.text = "\(Int(self.recommendProtein))"
         
-        self.fatCircleProgressView.progressAnimation(duration: 0.01, value: self.fat / 100, color: .yellow)
-        self.fatLabel.text = "\(self.fat)"
+        if self.protein >= self.recommendProtein {
+            self.setAdView(isOn: false)
+        } else {
+            self.setAdView(isOn: true)
+        }
+        
+        self.fatCircleProgressView.progressAnimation(duration: 0.01, value: self.fat / self.recommendFat, color: .yellow)
+        self.fatLabel.text = "\(Int(self.fat))"
+        self.recommendFatLabel.text = "\(Int(self.recommendFat))"
     }
     
+    private func setAdView(isOn: Bool) {
+        if isOn {
+            self.proteinAdvertiseViewHeightConstraint.constant = 100
+        } else {
+            self.proteinAdvertiseViewHeightConstraint.constant = 0
+        }
+    }
+    
+    private func setBreakfastView(heightValue: CGFloat) {
+        self.breakfastView.layer.cornerRadius = 5
+        self.breakfastViewHeightConstraint.constant = 35 + heightValue
+    }
+    
+    private func setLunchView(heightValue: CGFloat) {
+        self.lunchView.layer.cornerRadius = 5
+        self.lunchViewHeightConstraint.constant = 35 + heightValue
+    }
+    
+    private func setDinnerView(heightValue: CGFloat) {
+        self.dinnerView.layer.cornerRadius = 5
+        self.dinnerViewHeightConstraint.constant = 35 + heightValue
+    }
     
     
 
