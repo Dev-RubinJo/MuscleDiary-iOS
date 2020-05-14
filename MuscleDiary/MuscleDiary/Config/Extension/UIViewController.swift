@@ -26,6 +26,15 @@ extension UIViewController {
         self.view.endEditing(true)
     }
     
+    //View에 쉐도우 설정
+    func setShadow(view : UIView, radius: CGFloat, height: CGFloat){
+        view.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3).cgColor
+        view.layer.shadowOffset = CGSize(width: 0.0, height: height)
+        view.layer.shadowOpacity = 1.0
+        view.layer.shadowRadius = radius
+        view.layer.masksToBounds = false
+    }
+    
     // MARK: 확인만 뜨는 UIAlertController
     func presentAlert(title: String, message: String?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
