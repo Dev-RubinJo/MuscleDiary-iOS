@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		16BFAF58FF4669D1B2DBCCD1 /* Pods_MuscleDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D659BE1DEF935BE146756667 /* Pods_MuscleDiary.framework */; };
+		43343BC62471035A00E9A7DF /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43343BC52471035A00E9A7DF /* Server.swift */; };
+		43343BEB247125BC00E9A7DF /* SignInDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43343BEA247125BC00E9A7DF /* SignInDataManager.swift */; };
+		43343BEF2471361800E9A7DF /* DefaultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43343BEE2471361800E9A7DF /* DefaultResponse.swift */; };
+		43343BF2247137EF00E9A7DF /* SignUpDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43343BF1247137EF00E9A7DF /* SignUpDataManager.swift */; };
+		43343BF424713BEA00E9A7DF /* SignInDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43343BF324713BEA00E9A7DF /* SignInDataResponse.swift */; };
+		4353670524640EE8002522AB /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353670424640EE8002522AB /* FoodCell.swift */; };
+		4353670724641999002522AB /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353670624641999002522AB /* Food.swift */; };
+		4353670E246434CA002522AB /* AddFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353670D246434CA002522AB /* AddFoodVC.swift */; };
+		4353671024643504002522AB /* AddFoodProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353670F24643504002522AB /* AddFoodProtocol.swift */; };
 		4372D6AA2455F778000458AE /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372D6A92455F778000458AE /* SignInVC.swift */; };
 		4372D6AC24567F4F000458AE /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372D6AB24567F4F000458AE /* IndicatorView.swift */; };
 		4372D6AE24567FB8000458AE /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372D6AD24567FB8000458AE /* UIViewController.swift */; };
@@ -25,10 +34,22 @@
 		439B718C2455EB1B00019F81 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B718B2455EB1B00019F81 /* UIColor.swift */; };
 		439B718E2455EB6400019F81 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B718D2455EB6400019F81 /* String.swift */; };
 		439B71902455EBB400019F81 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B718F2455EBB400019F81 /* BaseVC.swift */; };
+		43A6D8E2246C1F1C0062550C /* FoodSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A6D8E0246C1F1C0062550C /* FoodSearchCell.swift */; };
+		43A6D8E3246C1F1C0062550C /* FoodSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A6D8E1246C1F1C0062550C /* FoodSearchCell.xib */; };
+		43A6D8E5246C224E0062550C /* SearchFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A6D8E4246C224E0062550C /* SearchFood.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1DC53F488F4436F99226A7B8 /* Pods-MuscleDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleDiary.release.xcconfig"; path = "Target Support Files/Pods-MuscleDiary/Pods-MuscleDiary.release.xcconfig"; sourceTree = "<group>"; };
+		43343BC52471035A00E9A7DF /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		43343BEA247125BC00E9A7DF /* SignInDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataManager.swift; sourceTree = "<group>"; };
+		43343BEE2471361800E9A7DF /* DefaultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponse.swift; sourceTree = "<group>"; };
+		43343BF1247137EF00E9A7DF /* SignUpDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataManager.swift; sourceTree = "<group>"; };
+		43343BF324713BEA00E9A7DF /* SignInDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataResponse.swift; sourceTree = "<group>"; };
+		4353670424640EE8002522AB /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		4353670624641999002522AB /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		4353670D246434CA002522AB /* AddFoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodVC.swift; sourceTree = "<group>"; };
+		4353670F24643504002522AB /* AddFoodProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodProtocol.swift; sourceTree = "<group>"; };
 		4372D6A92455F778000458AE /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		4372D6AB24567F4F000458AE /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		4372D6AD24567FB8000458AE /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +69,9 @@
 		439B718B2455EB1B00019F81 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		439B718D2455EB6400019F81 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		439B718F2455EBB400019F81 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		43A6D8E0246C1F1C0062550C /* FoodSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchCell.swift; sourceTree = "<group>"; };
+		43A6D8E1246C1F1C0062550C /* FoodSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSearchCell.xib; sourceTree = "<group>"; };
+		43A6D8E4246C224E0062550C /* SearchFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFood.swift; sourceTree = "<group>"; };
 		5935191B2FD470B20279AB68 /* Pods-MuscleDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleDiary.debug.xcconfig"; path = "Target Support Files/Pods-MuscleDiary/Pods-MuscleDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		D659BE1DEF935BE146756667 /* Pods_MuscleDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -64,6 +88,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43343BE9247125A400E9A7DF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				43343BEA247125BC00E9A7DF /* SignInDataManager.swift */,
+				43343BF324713BEA00E9A7DF /* SignInDataResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		43343BF0247137D100E9A7DF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				43343BF1247137EF00E9A7DF /* SignUpDataManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4353670324640E64002522AB /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4353670424640EE8002522AB /* FoodCell.swift */,
+				4353670624641999002522AB /* Food.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		43536708246430D4002522AB /* AddFood */ = {
+			isa = PBXGroup;
+			children = (
+				43A6D8DF246C1EF40062550C /* TableViewCell */,
+				4353670C246434B4002522AB /* View */,
+				4353670F24643504002522AB /* AddFoodProtocol.swift */,
+				43A6D8E4246C224E0062550C /* SearchFood.swift */,
+			);
+			path = AddFood;
+			sourceTree = "<group>";
+		};
+		43536709246430E2002522AB /* AdProtein */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AdProtein;
+			sourceTree = "<group>";
+		};
+		4353670A2464342D002522AB /* SubDomain */ = {
+			isa = PBXGroup;
+			children = (
+				43536709246430E2002522AB /* AdProtein */,
+				43536708246430D4002522AB /* AddFood */,
+			);
+			path = SubDomain;
+			sourceTree = "<group>";
+		};
+		4353670B24643436002522AB /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
+		4353670C246434B4002522AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4353670D246434CA002522AB /* AddFoodVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4372D6A82455F762000458AE /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				4372D6B9245D6530000458AE /* View */,
+				4353670B24643436002522AB /* PopUp */,
+				4353670A2464342D002522AB /* SubDomain */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -143,6 +237,7 @@
 		4372D6B9245D6530000458AE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4353670324640E64002522AB /* TableViewCell */,
 				4372D6BF245D6885000458AE /* FoodVC.swift */,
 			);
 			path = View;
@@ -195,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				4372D6A82455F762000458AE /* View */,
+				43343BE9247125A400E9A7DF /* Network */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -203,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				4372D6B4245D60BA000458AE /* View */,
+				43343BF0247137D100E9A7DF /* Network */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -214,6 +311,8 @@
 				439B718F2455EBB400019F81 /* BaseVC.swift */,
 				4372D6AB24567F4F000458AE /* IndicatorView.swift */,
 				4372D6C5245D962E000458AE /* CircleProgressBar.swift */,
+				43343BC52471035A00E9A7DF /* Server.swift */,
+				43343BEE2471361800E9A7DF /* DefaultResponse.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -226,6 +325,15 @@
 				4372D6AD24567FB8000458AE /* UIViewController.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		43A6D8DF246C1EF40062550C /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				43A6D8E0246C1F1C0062550C /* FoodSearchCell.swift */,
+				43A6D8E1246C1F1C0062550C /* FoodSearchCell.xib */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		77D2E6781D84D0681C5FAA5A /* Pods */ = {
@@ -306,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				438E4D8224532D0B00960F3C /* LaunchScreen.storyboard in Resources */,
+				43A6D8E3246C1F1C0062550C /* FoodSearchCell.xib in Resources */,
 				438E4D7F24532D0B00960F3C /* Assets.xcassets in Resources */,
 				438E4D7D24532D0200960F3C /* Main.storyboard in Resources */,
 			);
@@ -363,15 +472,26 @@
 				439B71902455EBB400019F81 /* BaseVC.swift in Sources */,
 				4372D6B6245D60D9000458AE /* SignUpVC.swift in Sources */,
 				439B718C2455EB1B00019F81 /* UIColor.swift in Sources */,
+				43343BEF2471361800E9A7DF /* DefaultResponse.swift in Sources */,
+				43343BEB247125BC00E9A7DF /* SignInDataManager.swift in Sources */,
 				4372D6AA2455F778000458AE /* SignInVC.swift in Sources */,
+				4353670E246434CA002522AB /* AddFoodVC.swift in Sources */,
+				43A6D8E5246C224E0062550C /* SearchFood.swift in Sources */,
 				4372D6AC24567F4F000458AE /* IndicatorView.swift in Sources */,
+				43343BC62471035A00E9A7DF /* Server.swift in Sources */,
 				439B718E2455EB6400019F81 /* String.swift in Sources */,
 				4372D6C6245D962E000458AE /* CircleProgressBar.swift in Sources */,
+				4353670524640EE8002522AB /* FoodCell.swift in Sources */,
+				4353671024643504002522AB /* AddFoodProtocol.swift in Sources */,
+				43A6D8E2246C1F1C0062550C /* FoodSearchCell.swift in Sources */,
 				438E4D7624532D0200960F3C /* AppDelegate.swift in Sources */,
+				43343BF424713BEA00E9A7DF /* SignInDataResponse.swift in Sources */,
 				4372D6BE245D6879000458AE /* ExerciseVC.swift in Sources */,
 				4372D6C0245D6885000458AE /* FoodVC.swift in Sources */,
 				4372D6AE24567FB8000458AE /* UIViewController.swift in Sources */,
 				438E4D7824532D0200960F3C /* SceneDelegate.swift in Sources */,
+				4353670724641999002522AB /* Food.swift in Sources */,
+				43343BF2247137EF00E9A7DF /* SignUpDataManager.swift in Sources */,
 				4372D6BC245D6869000458AE /* ChartVC.swift in Sources */,
 				4372D6C2245D6893000458AE /* SettingVC.swift in Sources */,
 			);

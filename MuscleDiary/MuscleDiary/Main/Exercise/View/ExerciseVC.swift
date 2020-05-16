@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import FSCalendar
 
-class ExerciseVC: UIViewController {
-
+class ExerciseVC: BaseVC {
+    
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var fsCalendar: FSCalendar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
 
