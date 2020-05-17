@@ -10,8 +10,8 @@ import UIKit
 
 class SignInVC: BaseVC {
     
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var emailTextFieldBottomView: UIView!
+    @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var idTextFieldBottomView: UIView!
     
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordTextFieldBottomView: UIView!
@@ -23,14 +23,17 @@ class SignInVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.signInButton.addTarget(self, action: #selector(self.presentMainVC), for: .touchUpInside)
+        self.signInButton.addTarget(self, action: #selector(self.pressSignInButton), for: .touchUpInside)
     }
     
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SignUpSegue" {
-            
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
     }
 }
 extension SignInVC {
@@ -40,7 +43,20 @@ extension SignInVC {
         }
     }
     
-    @objc fileprivate func presentMainVC() {
+    @objc fileprivate func pressSignInButton() {
+        if self.idTextField.text != "" && self.passwordTextField.text != nil {
+            let signInDataManager = SignInDataManager()
+            guard let id = self.idTextField.text, let password = self.passwordTextField.text else {
+                return
+            }
+            signInDataManager.signIn(vc: self, id: id, password: password)
+        } else {
+            self.presentAlert(title: "입력값 없음", message: "아이디 패스워드 입력안됨")
+        }
+        
+    }
+    
+    func presentMainVC() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "MainVC")
         self.window?.rootViewController = mainVC
