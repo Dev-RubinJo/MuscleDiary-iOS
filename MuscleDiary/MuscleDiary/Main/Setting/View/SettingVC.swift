@@ -9,11 +9,23 @@
 import UIKit
 
 class SettingVC: UIViewController {
-
+    @IBOutlet weak var signOutButton: UIButton!
+    
+    var window: UIWindow?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.signOutButton.addTarget(self, action: #selector(self.pressSignOutButton), for: .touchUpInside)
+    }
+    
+    @objc func pressSignOutButton() {
+        UserDefaults.standard.removeObject(forKey: "LoginToken")
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let signInVC = mainStoryboard.instantiateViewController(withIdentifier: "SignInVC")
+        UIApplication.shared.windows.first?.rootViewController = signInVC
     }
     
 
