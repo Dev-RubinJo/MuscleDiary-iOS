@@ -18,6 +18,8 @@ target 'MuscleDiary' do
   
   # Calendar
   pod 'FSCalendar'
+  # Charts
+  pod 'Charts'
   
   # Drawer View Controller
   # pod 'KWDrawerController', '~> 4.2'
@@ -31,7 +33,7 @@ target 'MuscleDiary' do
   pod 'Firebase/Analytics'
   # pod 'Fabric', '~> 1.10.2'
   # pod 'Crashlytics', '~> 3.14.0'
-  pod 'Firebase/Crashlytics'
+#  pod 'Firebase/Crashlytics'
   # pod 'FirebaseStorage'
 
 end
