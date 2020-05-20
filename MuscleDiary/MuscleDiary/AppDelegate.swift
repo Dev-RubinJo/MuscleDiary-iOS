@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import Firebase
 import AlamofireNetworkActivityIndicator
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         NetworkActivityIndicatorManager.shared.isEnabled = true
+        
+        FirebaseApp.configure()
         
         if let _ = UserDefaults.standard.string(forKey: "LoginToken") {
             if #available(iOS 13.0, *) {}
@@ -50,4 +54,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
