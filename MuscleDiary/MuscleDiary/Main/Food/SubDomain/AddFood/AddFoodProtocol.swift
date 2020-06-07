@@ -10,6 +10,6 @@ import Foundation
 
 protocol AddFoodDelegate: class {
     
-    func addFoodToFoolList(food: Food)
+    func addFoodToFoolList() -> FoodVC
     
 }
