@@ -13,15 +13,15 @@ struct SearchFood {
     var carbohydrate: Double
     var protein: Double
     var fat: Double
-    var calory: Double
+    var calorie: Double
     var servingSize: Double
     
-    init(name: String, carbohydrate: Double, protein: Double, fat: Double, calory: Double, servingSize: Double) {
+    init(name: String, carbohydrate: Double, protein: Double, fat: Double, calorie: Double, servingSize: Double) {
         self.foodName = name
         self.carbohydrate = carbohydrate
         self.protein = protein
         self.fat = fat
-        self.calory = calory
+        self.calorie = calorie
         self.servingSize = servingSize
     }
 }
