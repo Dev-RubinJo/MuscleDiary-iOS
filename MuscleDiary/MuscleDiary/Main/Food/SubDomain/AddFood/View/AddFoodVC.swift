@@ -37,11 +37,20 @@ class AddFoodVC: BaseVC {
      double menuKcalList2[] = {50,12,102,432.2,24,13,25,434.3,113,13,112,145.2};
      */
     
-    var searchFoodList: [Food] = [
-        Food(name: "스테이크", carbohydrate: 50, protein: 12, fat: 102, calory: 432.2, servingSize: 100),
-        Food(name: "연어", carbohydrate: 24, protein: 13, fat: 25, calory: 434.3, servingSize: 130),
-        Food(name: "단백질 파우더", carbohydrate: 113, protein: 13, fat: 112, calory: 145.2, servingSize: 230)
-    ]
+    var searchFoodList: [Food] = []
+    
+    var food: Food?
+    var date: String {
+        get {
+            return self.dateFormatter.string(from: Date())
+        }
+    }
+    
+    fileprivate lazy var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }()
     
     var dishCategory: Int = 0
     var isPopUp: Bool = false
@@ -54,15 +63,17 @@ class AddFoodVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.mainAmountPickerView.delegate = self
-        self.mainAmountPickerView.dataSource = self
-        self.subAmountPickerView.delegate = self
-        self.subAmountPickerView.dataSource = self
+        self.foodSearchButton.addTarget(self, action: #selector(self.pressSearchFoodButton), for: .touchUpInside)
         
         self.searchResultTableView.delegate = self
         self.searchResultTableView.dataSource = self
         
         self.searchResultTableView.register(UINib(nibName: "FoodSearchCell", bundle: nil), forCellReuseIdentifier: "FoodSearchCell")
+        
+        self.mainAmountPickerView.delegate = self
+        self.mainAmountPickerView.dataSource = self
+        self.subAmountPickerView.delegate = self
+        self.subAmountPickerView.dataSource = self
         
         self.setAddFoodPopUpVC()
         self.confirmButton.addTarget(self, action: #selector(self.pressConfirmButton(_:)), for: .touchUpInside)
@@ -76,6 +87,16 @@ class AddFoodVC: BaseVC {
 //        let maskLayer = CAShapeLayer()
 //        maskLayer.path = maskPath.cgPath
 //        self.addFoodPopUpVC.layer.mask = maskLayer
+    }
+    
+    @objc func pressSearchFoodButton() {
+        if self.foodSearchTextField.text == "" {
+            self.presentAlert(title: "음식명을 입력해주세요", message: "음식 이름을 입력해주세요")
+        } else {
+            guard let keyword = self.foodSearchTextField.text else { return }
+            let addFoodDataManager = AddFoodDataManager()
+            addFoodDataManager.searchFoodByKeyword(vc: self, keyword: keyword)
+        }
     }
     
     @objc private func showAddFoodPopUpVC() {
@@ -105,9 +126,27 @@ class AddFoodVC: BaseVC {
     }
     
     @objc private func pressConfirmButton(_ sender: UIButton) {
-        print(Double("\(mainAmount).\(subAmount)"))
-//        self.addFoodDelegate?.addFoodToFoolList(food: <#T##Food#>)
-        self.navigationController?.popViewController(animated: true)
+        let multiple = Double("\(mainAmount).\(subAmount)")!
+        if multiple == 0 {
+            self.presentAlert(title: "입력오류", message: "똑바로 입력해주시기 바랍니다.")
+            return
+        }
+//        self.food!.calorie = self.food!.calorie
+//        self.food!.carbohydrate = self.food!.carbohydrate
+//        self.food!.protein = self.food!.protein
+//        self.food!.fat = self.food!.fat
+//        self.food!.servingSize = self.food!.servingSize
+        
+        self.food?.serving = multiple
+        
+        guard let food = self.food else {
+            self.presentAlert(title: "음식 오류", message: "음식이 잘못되었습니다")
+            return
+        }
+        
+        let dataManager = FoodDataManager()
+        dataManager.addFood(fromVC: self, date: self.date, food: food, dish: self.dishCategory)
+        
     }
 }
 extension AddFoodVC: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -152,19 +191,23 @@ extension AddFoodVC: UITableViewDelegate, UITableViewDataSource {
         
         let searchFood = self.searchFoodList[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FoodSearchCell", for: indexPath) as? FoodSearchCell else { return UITableViewCell() }
+        if let region = searchFood.region {
+            cell.foodNameLabel.text = "\(searchFood.foodName)(\(region))"
+        } else {
+            cell.foodNameLabel.text = "\(searchFood.foodName)"
+        }
         
-        cell.foodNameLabel.text = searchFood.foodName
         cell.foodDescriptionLabel.text = "탄수화물: \(searchFood.carbohydrate), 단백질: \(searchFood.protein), 지방: \(searchFood.fat)"
-        cell.kaloryLabel.text = "\(searchFood.calory) Kcal"
+        cell.kaloryLabel.text = "\(searchFood.calorie) Kcal"
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let searchFood = self.searchFoodList[indexPath.row]
+        self.food = searchFood
         self.foodNameLabel.text = searchFood.foodName
         self.servingSizeDescriptionLabel.text = "메뉴 1회 제공량(\(searchFood.servingSize)g / 1인분)"
         self.showAddFoodPopUpVC()
     }
-    
 }
