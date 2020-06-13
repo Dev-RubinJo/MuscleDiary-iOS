@@ -27,7 +27,7 @@ class FoodCell: UITableViewCell {
         return label
     }()
     
-    lazy var caloryLabel: UILabel = {
+    lazy var calorieLabel: UILabel = {
         let label = UILabel()
         label.text = "100.2Kcal"
         label.font = UIFont.systemFont(ofSize: 15)
@@ -56,12 +56,13 @@ class FoodCell: UITableViewCell {
         }
         
         containerView.addSubview(foodNameLabel)
-        containerView.addSubview(caloryLabel)
+        containerView.addSubview(calorieLabel)
         containerView.addSubview(deleteButton)
         
         foodNameLabel.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.left.equalTo(15)
+            make.right.equalTo(calorieLabel.snp.left).offset(10)
         }
         
         deleteButton.snp.makeConstraints { make in
@@ -72,12 +73,13 @@ class FoodCell: UITableViewCell {
             make.right.equalTo(-5)
         }
         
-        caloryLabel.snp.makeConstraints { make in
+        calorieLabel.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
+            make.width.equalTo(85)
             make.right.equalTo(deleteButton.snp.left).offset(-15)
         }
         
-        self.selectionStyle = .none
+//        self.selectionStyle = .none
     }
     
     required init?(coder aDecoder: NSCoder) {
