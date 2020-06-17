@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignInVC: BaseVC {
     
@@ -22,6 +23,8 @@ class SignInVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Analytics.logEvent("SignIn_iOS", parameters: ["req": "SignIn_iOS"])
 
         self.signInButton.addTarget(self, action: #selector(self.pressSignInButton), for: .touchUpInside)
     }
@@ -49,6 +52,7 @@ extension SignInVC {
             guard let id = self.idTextField.text, let password = self.passwordTextField.text else {
                 return
             }
+            Analytics.logEvent("PressSignInButton_iOS", parameters: ["req": "PressSignInButton_iOS"])
             signInDataManager.signIn(vc: self, id: id, password: password)
         } else {
             self.presentAlert(title: "입력값 없음", message: "아이디 패스워드 입력안됨")
