@@ -46,6 +46,7 @@ class SettingVC: UIViewController {
     var height: Double = 0.0
     var weight: Double = 0.0
     
+//    var goal: Int
     var goalCalorie: Int = 0
     var carbohydrateRate: Int = 0
     var proteinRate: Int = 0
@@ -273,23 +274,44 @@ class SettingVC: UIViewController {
         let alert: UIAlertController = UIAlertController(title: "주간 목표 선택", message: nil, preferredStyle: .actionSheet)
         let week05m = UIAlertAction(title: "주당 0.5Kg 감량", style: .default) { _ in
             self.settingWeekGoalLabel.text = "주간 목표 - 주당 0.5Kg 감량"
+            self.goalCalorie = Int(Double(self.goalCalorie) * 0.8)
+            if self.goalCalorie != 0 {
+                self.settingGoalCalorieLabel.text = "\(self.goalCalorie)Kcal"
+            }
             self.settingDataManager.setWeekGoal(fromVC: self, goal: 1)
+            self.settingDataManager.setNutrition(fromVC: self, calorie: self.goalCalorie, carbohydrateRate: self.carbohydrateRate, proteinRate: self.proteinRate, fatRate: self.fatRate)
         }
         let week02m = UIAlertAction(title: "주당 0.2Kg 감량", style: .default) { _ in
             self.settingWeekGoalLabel.text = "주간 목표 - 주당 0.2Kg 감량"
+            self.goalCalorie = Int(Double(self.goalCalorie) * 0.9)
+            if self.goalCalorie != 0 {
+                self.settingGoalCalorieLabel.text = "\(self.goalCalorie)Kcal"
+            }
             self.settingDataManager.setWeekGoal(fromVC: self, goal: 2)
+            self.settingDataManager.setNutrition(fromVC: self, calorie: self.goalCalorie, carbohydrateRate: self.carbohydrateRate, proteinRate: self.proteinRate, fatRate: self.fatRate)
         }
         let weekKeep = UIAlertAction(title: "주당 체중 유지", style: .default) { _ in
             self.settingWeekGoalLabel.text = "주간 목표 - 주당 체중 유지"
             self.settingDataManager.setWeekGoal(fromVC: self, goal: 3)
+            self.settingDataManager.setNutrition(fromVC: self, calorie: self.goalCalorie, carbohydrateRate: self.carbohydrateRate, proteinRate: self.proteinRate, fatRate: self.fatRate)
         }
         let week02p = UIAlertAction(title: "주당 0.2Kg 증량", style: .default) { _ in
             self.settingWeekGoalLabel.text = "주간 목표 - 주당 0.2Kg 증량"
+            self.goalCalorie = Int(Double(self.goalCalorie) * 1.1)
+            if self.goalCalorie != 0 {
+                self.settingGoalCalorieLabel.text = "\(self.goalCalorie)Kcal"
+            }
             self.settingDataManager.setWeekGoal(fromVC: self, goal: 4)
+            self.settingDataManager.setNutrition(fromVC: self, calorie: self.goalCalorie, carbohydrateRate: self.carbohydrateRate, proteinRate: self.proteinRate, fatRate: self.fatRate)
         }
         let week05p = UIAlertAction(title: "주당 0.5Kg 증량", style: .default) { _ in
             self.settingWeekGoalLabel.text = "주간 목표 - 주당 0.5Kg 증량"
+            self.goalCalorie = Int(Double(self.goalCalorie) * 1.2)
+            if self.goalCalorie != 0 {
+                self.settingGoalCalorieLabel.text = "\(self.goalCalorie)Kcal"
+            }
             self.settingDataManager.setWeekGoal(fromVC: self, goal: 5)
+            self.settingDataManager.setNutrition(fromVC: self, calorie: self.goalCalorie, carbohydrateRate: self.carbohydrateRate, proteinRate: self.proteinRate, fatRate: self.fatRate)
         }
         
         let cancelAction = UIAlertAction(title: "취소", style: .cancel) { _ in
