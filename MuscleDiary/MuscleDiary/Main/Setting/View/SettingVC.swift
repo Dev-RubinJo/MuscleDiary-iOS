@@ -46,7 +46,7 @@ class SettingVC: UIViewController {
     var height: Double = 0.0
     var weight: Double = 0.0
     
-//    var goal: Int
+    var goal: Int = 0
     var goalCalorie: Int = 0
     var carbohydrateRate: Int = 0
     var proteinRate: Int = 0
