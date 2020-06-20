@@ -273,6 +273,7 @@ class SettingVC: UIViewController {
     @objc func pressSettingWeekGoal() {
         let alert: UIAlertController = UIAlertController(title: "주간 목표 선택", message: nil, preferredStyle: .actionSheet)
         let week05m = UIAlertAction(title: "주당 0.5Kg 감량", style: .default) { _ in
+            self.goal = 1
             self.settingWeekGoalLabel.text = "주간 목표 - 주당 0.5Kg 감량"
             self.goalCalorie = Int(Double(self.goalCalorie) * 0.8)
             if self.goalCalorie != 0 {
