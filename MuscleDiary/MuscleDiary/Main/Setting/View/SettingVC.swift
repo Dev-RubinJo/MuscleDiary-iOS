@@ -309,6 +309,7 @@ class SettingVC: UIViewController {
             self.settingDataManager.setNutrition(fromVC: self, calorie: self.goalCalorie, carbohydrateRate: self.carbohydrateRate, proteinRate: self.proteinRate, fatRate: self.fatRate)
         }
         let week05p = UIAlertAction(title: "주당 0.5Kg 증량", style: .default) { _ in
+            self.goal = 5
             self.settingWeekGoalLabel.text = "주간 목표 - 주당 0.5Kg 증량"
             self.goalCalorie = Int(Double(self.goalCalorie) * 1.2)
             if self.goalCalorie != 0 {
