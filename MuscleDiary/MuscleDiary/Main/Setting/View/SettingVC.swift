@@ -274,6 +274,8 @@ class SettingVC: UIViewController {
         let alert: UIAlertController = UIAlertController(title: "주간 목표 선택", message: nil, preferredStyle: .actionSheet)
         if goal == 1 {
             self.goalCalorie = Int(Double(self.goalCalorie) * 1.25)
+        } else if goal == 2 {
+            self.goalCalorie = Int(Double(self.goalCalorie) * (10 / 9))
         }
         let week05m = UIAlertAction(title: "주당 0.5Kg 감량", style: .default) { _ in
             self.goal = 1
