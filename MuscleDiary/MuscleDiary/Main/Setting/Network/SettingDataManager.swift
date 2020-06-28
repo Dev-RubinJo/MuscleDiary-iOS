@@ -309,14 +309,19 @@ class SettingDataManager {
                     
                     guard let goal = weekGoalResponse.result[0].weekGoal else { return }
                     if goal == 1 {
+                        vc.goal = 1
                         vc.settingWeekGoalLabel.text = "주간 목표 - 주당 0.5Kg 감량"
                     } else if goal == 2 {
+                        vc.goal = 2
                         vc.settingWeekGoalLabel.text = "주간 목표 - 주당 0.2Kg 감량"
                     } else if goal == 3 {
+                        vc.goal = 3
                         vc.settingWeekGoalLabel.text = "주간 목표 - 주당 체중 유지"
                     } else if goal == 4 {
+                        vc.goal = 4
                         vc.settingWeekGoalLabel.text = "주간 목표 - 주당 0.2Kg 증량"
                     } else if goal == 5 {
+                        vc.goal = 5
                         vc.settingWeekGoalLabel.text = "주간 목표 - 주당 0.5Kg 증량"
                     }
                 case .failure(let error):
