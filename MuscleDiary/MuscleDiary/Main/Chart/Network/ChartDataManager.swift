@@ -55,12 +55,14 @@ class ChartDataManager {
             "x-access-token": signInToken
         ]
         
-        Alamofire.request("\(ApiAddress.default)/user/weekly/weight?weekDate=\(vc.date)", method: .get, headers: headers)
+//        Alamofire.request("\(ApiAddress.default)/user/weekly/weight?weekDate=\(vc.date)", method: .get, headers: headers)
+        Alamofire.request("\(ApiAddress.default)/user/weekly/weight?weekDate=\(vc.dateFormatter.string(from: Date() - 7))", method: .get, headers: headers)
             .validate()
             .responseObject(completionHandler: { (response: DataResponse<ChartResponse>) in
                 switch response.result {
                 case .success(let chartResponse):
                     print(chartResponse)
+                    
                     if chartResponse.code == 102 {
                         if let chartList = chartResponse.result {
                             var temp = 0
@@ -75,11 +77,10 @@ class ChartDataManager {
                                 }
                             }
                             //                            vc.setChartView()
-                            vc.updateChartData()
-                            vc.dataTableView.reloadData()
                         }
-                        
                     }
+                    vc.updateChartData()
+                    vc.dataTableView.reloadData()
                 case .failure(let error):
                     print(error)
                 }
@@ -94,7 +95,8 @@ class ChartDataManager {
         let headers = [
             "x-access-token": signInToken
         ]
-        Alamofire.request("\(ApiAddress.default)/user/weekly/weight?monthDate=\(vc.date)", method: .get, headers: headers)
+//        Alamofire.request("\(ApiAddress.default)/user/weekly/weight?monthDate=\(vc.date)", method: .get, headers: headers)
+        Alamofire.request("\(ApiAddress.default)/user/monthly/weight?monthDate=\(vc.dateFormatter.string(from: Date() - 30))", method: .get, headers: headers)
             .validate()
             .responseObject(completionHandler: { (response: DataResponse<ChartResponse>) in
                 switch response.result {
@@ -115,12 +117,10 @@ class ChartDataManager {
                                 }
                             }
                             //                            vc.setChartView()
-                            vc.updateChartData()
-                            vc.dataTableView.reloadData()
                         }
-                        
                     }
-                    
+                    vc.updateChartData()
+                    vc.dataTableView.reloadData()
                 case .failure(let error):
                     print(error)
                 }
@@ -135,7 +135,11 @@ class ChartDataManager {
         let headers = [
             "x-access-token": signInToken
         ]
-        Alamofire.request("\(ApiAddress.default)/user/weekly/weight?yearDate=\(vc.date)", method: .get, headers: headers)
+        
+        print(vc.dateFormatter.string(from: Date() - 365))
+        
+//        Alamofire.request("\(ApiAddress.default)/user/weekly/weight?yearDate=\(vc.date)", method: .get, headers: headers)
+        Alamofire.request("\(ApiAddress.default)/user/yearly/weight?yearDate=\(vc.dateFormatter.string(from: Date() - 365))", method: .get, headers: headers)
             .validate()
             .responseObject(completionHandler: { (response: DataResponse<ChartResponse>) in
                 switch response.result {
@@ -155,11 +159,10 @@ class ChartDataManager {
                                 }
                             }
                             //                            vc.setChartView()
-                            vc.updateChartData()
-                            vc.dataTableView.reloadData()
                         }
-                        
                     }
+                    vc.updateChartData()
+                    vc.dataTableView.reloadData()
                 case .failure(let error):
                     print(error)
                 }
