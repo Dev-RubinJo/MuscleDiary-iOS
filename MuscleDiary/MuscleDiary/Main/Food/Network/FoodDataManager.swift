@@ -126,7 +126,7 @@ class FoodDataManager {
             })
         
         // 저녁
-        Alamofire.request("\(ApiAddress.default)/user/meal?mealType=2&recordDate=\(date)", method: .get, headers: headers)
+        Alamofire.request("\(ApiAddress.default)/user/meal?mealType=3&recordDate=\(date)", method: .get, headers: headers)
             .validate()
             .responseObject(completionHandler: { (response: DataResponse<FoodResponse>) in
                 switch response.result {
@@ -145,7 +145,7 @@ class FoodDataManager {
             })
         
         // 기타
-        Alamofire.request("\(ApiAddress.default)/user/meal?mealType=2&recordDate=\(date)", method: .get, headers: headers)
+        Alamofire.request("\(ApiAddress.default)/user/meal?mealType=4&recordDate=\(date)", method: .get, headers: headers)
             .validate()
             .responseObject(completionHandler: { (response: DataResponse<FoodResponse>) in
                 switch response.result {
