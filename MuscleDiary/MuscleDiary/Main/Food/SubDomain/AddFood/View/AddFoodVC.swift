@@ -40,11 +40,7 @@ class AddFoodVC: BaseVC {
     var searchFoodList: [Food] = []
     
     var food: Food?
-    var date: String {
-        get {
-            return self.dateFormatter.string(from: Date())
-        }
-    }
+    var date: String = ""
     
     fileprivate lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
