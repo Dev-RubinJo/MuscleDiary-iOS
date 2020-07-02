@@ -130,7 +130,7 @@ class FoodVC: BaseVC {
         super.viewWillAppear(animated)
         let dataManager = FoodDataManager()
         dataManager.retrieveNutritionInfo(fromVC: self)
-        dataManager.retrieveFoodList(fromVC: self, date: self.dateFormatter.string(from: Date()))
+        dataManager.retrieveFoodList(fromVC: self, date: self.date)
         self.updateCircleProgressBar()
         self.reloadTableView()
     }
@@ -274,15 +274,19 @@ class FoodVC: BaseVC {
         if segue.identifier == "breakfastSegue" {
             vc.navigationItem.title = "아침"
             vc.dishCategory = 0
+            vc.date = self.date
         } else if segue.identifier == "lunchSegue" {
             vc.navigationItem.title = "점심"
             vc.dishCategory = 1
+            vc.date = self.date
         } else if segue.identifier == "dinnerSegue" {
             vc.navigationItem.title = "저녁"
             vc.dishCategory = 2
+            vc.date = self.date
         } else if segue.identifier == "etcSegue" {
             vc.navigationItem.title = "기타"
             vc.dishCategory = 3
+            vc.date = self.date
         }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
